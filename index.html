@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meesterschap Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- thema toggle checkbox visueel verborgen -->
+    <input type="checkbox" id="thema-checkbox" class="thema-checkbox">
+
+    <!-- pagina wrapper voor css sibling selectors -->
+    <div class="pagina-wrapper">
+        <!-- animatie achtergrond blobs -->
+        <div class="body-achtergrond">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+
+        <!-- glassmorphic header -->
+        <header class="hoofd-header glas">
+            <div class="header-inhoud container">
+                <h1><a href="#">Minor WDD.</a></h1>
+                <nav class="hoofd-nav">
+                    <a href="#leerdoelen">Leerdoelen</a>
+                    <a href="#projecten">Projecten</a>
+                    <a href="#weekly-nerd">Weekly Nerd</a>
+                    <a href="#reflectie">Reflectie</a>
+                </nav>
+                <label for="thema-checkbox" id="thema-toggle" aria-label="donkere modus inschakelen" role="button"
+                    tabindex="0">
+                    <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </label>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero container">
+                <div class="hero-inhoud">
+                    <div class="hero-badge">Lynn Bolderman</div>
+                    <h2>Welkom op mijn <span class="accent">Meesterschapsblog</span></h2>
+                    <p>Ik ga hier in op de vakken, Weekly Nerds, Sprint 0, Hackathon en de Meesterproef.</p>
+                </div>
+            </section>
+
+            <section id="leerdoelen" class="projecten-sectie container">
+                <div class="sectie-header">
+                    <h2>Leerdoelen</h2>
+                    <p>De focuspunten waar ik mezelf gedurende deze minor in uitdaag.</p>
+                </div>
+                <div class="projecten-raster">
+                    <div class="glas-kaart project-kaart no-hover">
+                        <div class="kaart-inhoud">
+                            <div class="kaart-icoon">01</div>
+                            <h3>Creativiteit</h3>
+                            <p>Ik wil leren hoe ik creatieve en speelse interacties kan bouwen in plaats van "alleen
+                                functionele" interfaces.</p>
+                        </div>
+                    </div>
+                    <div class="glas-kaart project-kaart no-hover">
+                        <div class="kaart-inhoud">
+                            <div class="kaart-icoon">02</div>
+                            <h3>Experimenteren</h3>
+                            <p>Ik wil beter worden in experimenteren en niet terughoudend zijn met het uitproberen van
+                                nieuwe technieken.</p>
+                        </div>
+                    </div>
+                    <div class="glas-kaart project-kaart no-hover">
+                        <div class="kaart-inhoud">
+                            <div class="kaart-icoon">03</div>
+                            <h3>Iteraties & Feedback</h3>
+                            <p>Ik wil beter worden in het vastleggen van verschillende iteraties en het verwerken van
+                                feedback in mijn proces.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projecten" class="projecten-sectie container">
+                <div class="sectie-header">
+                    <h2>Projecten</h2>
+                    <p>Een overzicht van de projecten waaraan ik heb gewerkt tijdens de minor.</p>
+                </div>
+                <div class="projecten-raster">
+                    <button class="project-kaart glas-kaart" popovertarget="modal-1">
+                        <div class="kaart-inhoud">
+                            <div class="kaart-icoon">01</div>
+                            <h3>Sprint 0</h3>
+                            <span class="lees-meer">Bekijk Details &rarr;</span>
+                        </div>
+                    </button>
+                    <button class="project-kaart glas-kaart" popovertarget="modal-2">
+                        <div class="kaart-inhoud">
+                            <div class="kaart-icoon">02</div>
+                            <h3>Browser Technology</h3>
+                            <span class="lees-meer">Bekijk Details &rarr;</span>
+                        </div>
+                    </button>
+                    <button class="project-kaart glas-kaart" popovertarget="modal-3">
+                        <div class="kaart-inhoud">
+                            <div class="kaart-icoon">03</div>
+                            <h3>CSS to the Rescue</h3>
+                            <span class="lees-meer">Bekijk Details &rarr;</span>
+                        </div>
+                    </button>
+                    <button class="project-kaart glas-kaart" popovertarget="modal-4">
+                        <div class="kaart-inhoud">
+                            <div class="kaart-icoon">04</div>
+                            <h3>Hackathon</h3>
+                            <span class="lees-meer">Bekijk Details &rarr;</span>
+                        </div>
+                    </button>
+                    <button class="project-kaart glas-kaart" popovertarget="modal-5">
+                        <div class="kaart-inhoud">
+                            <div class="kaart-icoon">05</div>
+                            <h3>HCD</h3>
+                            <span class="lees-meer">Bekijk Details &rarr;</span>
+                        </div>
+                    </button>
+                    <button class="project-kaart glas-kaart" popovertarget="modal-6">
+                        <div class="kaart-inhoud">
+                            <div class="kaart-icoon">06</div>
+                            <h3>API</h3>
+                            <span class="lees-meer">Bekijk Details &rarr;</span>
+                        </div>
+                    </button>
+                    <button class="project-kaart glas-kaart" popovertarget="modal-7">
+                        <div class="kaart-inhoud">
+                            <div class="kaart-icoon">07</div>
+                            <h3>Meesterproef</h3>
+                            <span class="lees-meer">Bekijk Details &rarr;</span>
+                        </div>
+                    </button>
+                </div>
+            </section>
+
+            <section id="weekly-nerd" class="projecten-sectie container">
+                <div class="sectie-header">
+                    <h2>Weekly Nerd</h2>
+                    <p>Verslagen van de gastcolleges.</p>
+                </div>
+                <div class="projecten-raster">
+                    <button class="project-kaart glas-kaart" popovertarget="wn-modal-1">
+                        <div class="kaart-inhoud">
+                            <div class="kaart-icoon">01</div>
+                            <h3>Kilian Valkhof</h3>
+                            <span class="lees-meer">Lees verslag &rarr;</span>
+                        </div>
+                    </button>
+                    <button class="project-kaart glas-kaart" popovertarget="wn-modal-2">
+                        <div class="kaart-inhoud">
+                            <div class="kaart-icoon">02</div>
+                            <h3>Peter-Paul Koch</h3>
+                            <span class="lees-meer">Lees verslag &rarr;</span>
+                        </div>
+                    </button>
+                    <button class="project-kaart glas-kaart" popovertarget="wn-modal-3">
+                        <div class="kaart-inhoud">
+                            <div class="kaart-icoon">03</div>
+                            <h3>Nils Binder</h3>
+                            <span class="lees-meer">Lees verslag &rarr;</span>
+                        </div>
+                    </button>
+
+                    <button class="project-kaart glas-kaart" popovertarget="wn-modal-4">
+                        <div class="kaart-inhoud">
+                            <div class="kaart-icoon">04</div>
+                            <h3>NL Design System</h3>
+                            <span class="lees-meer">Lees verslag &rarr;</span>
+                        </div>
+                    </button>
+                    <button class="project-kaart glas-kaart" popovertarget="wn-modal-5">
+                        <div class="kaart-inhoud">
+                            <div class="kaart-icoon">05</div>
+                            <h3>Rosa (Hackers)</h3>
+                            <span class="lees-meer">Lees verslag &rarr;</span>
+                        </div>
+                    </button>
+                    <button class="project-kaart glas-kaart" popovertarget="wn-modal-6">
+                        <div class="kaart-inhoud">
+                            <div class="kaart-icoon">06</div>
+                            <h3>Johann Huijkman</h3>
+                            <span class="lees-meer">Lees verslag &rarr;</span>
+                        </div>
+                    </button>
+                    <button class="project-kaart glas-kaart" popovertarget="wn-modal-7">
+                        <div class="kaart-inhoud">
+                            <div class="kaart-icoon">07</div>
+                            <h3>Sanne Peters</h3>
+                            <span class="lees-meer">Lees verslag &rarr;</span>
+                        </div>
+                    </button>
+                </div>
+            </section>
+
+            <section id="reflectie" class="projecten-sectie container">
+                <div class="sectie-header">
+                    <h2>Reflectie</h2>
+                    <p>Mijn persoonlijke terugblik op de minor en mijn groei als developer.</p>
+                </div>
+                <div class="glas-kaart reflectie-kaart">
+                    <div class="reflectie-sectie">
+                        <h3>Terugblik op mijn Leerdoelen</h3>
+                        <p>Aan het begin van de minor heb ik drie doelen voor mezelf gesteld. Nu ik terugkijk, zie ik
+                            hoe elk project me heeft geholpen om daar te komen.</p>
+                        <p>Wat betreft creativiteit was mijn project voor CSS to the Rescue een
+                            echte eye-opener. Ik heb daar geleerd dat je geen ingewikkelde JavaScript nodig hebt om iets
+                            vets te bouwen; met pure CSS heb ik een levende, glitchy kaleidoscoop gemaakt die precies de
+                            speelsheid heeft waar ik naar op zoek was.</p>
+                        <p>Het experimenteren kwam vooral naar voren bij de Karaoke App. Ik ben daar echt in het diepe
+                            gesprongen met technieken die ik nog niet kende, zoals de Picture-in-Picture API en View
+                            Transitions. Het was een uitdagend proces om deze moderne browser API's vloeiend te laten
+                            samenwerken, maar door door te zetten heb ik geleerd dat je met onderzoek en focus heel ver
+                            kunt komen.</p>
+                        <p>Tot slot heb ik veel geleerd over iteraties & feedback tijdens HCD. Door
+                            mijn prototype telkens opnieuw te testen met Berend, heb ik geleerd om mijn eigen aannames
+                            los te laten. Een ontwerp is pas echt goed als het werkt voor de gebruiker, niet alleen als
+                            het er in mijn eigen ogen mooi uitziet. Ik ben gegroeid van een developer die vooral voor
+                            zichzelf bouwt naar iemand die ontwerpt voor de mens aan de andere kant van het scherm.</p>
+                    </div>
+
+                    <div class="reflectie-sectie">
+                        <h3>Blik op de Toekomst</h3>
+                        <p>Kijkend naar de Meesterproef heb ik een aantal persoonlijke en technische
+                            doelen waar ik me op wil focussen. Ten eerste wil ik toegankelijkheid vanaf
+                            de eerste regel code meenemen. De lessen van Berend hebben me geleerd dat inclusief
+                            ontwerpen de standaard moet zijn, niet een extraatje achteraf.</p>
+                        <p>Daarnaast wil ik me nog verder verdiepen in CSS. Ik vind het geweldig om te
+                            zien hoe je met styling een hele beleving neerzet, en ik wil tijdens de Meesterproef de
+                            grenzen van wat ik kan nog verder verleggen om mijn eigen creatieve stempel
+                            op het eindproduct te drukken.</p>
+                        <p>Wat betreft JavaScript wil ik een goede balans vinden. Ik vind het leuk om
+                            dingen echt werkend te maken, maar ik merk dat ingewikkelde backend-logica me soms
+                            ontmoedigt. Mijn doel is om JS vooral in te zetten waar het waarde toevoegt aan de
+                            beleving, zonder dat ik mezelf verlies in te complexe systemen.</p>
+                        <p>Tot slot kijk ik enorm uit naar het samenwerken in een groep voor een echte
+                            opdrachtgever. Het lijkt me een vette uitdaging om een aantal weken lang intensief met
+                            anderen aan één project te bouwen en de wensen van een echte opdrachtgever te vertalen naar
+                            een werkend
+                            product.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- project modals (popover api) -->
+        <div id="modal-1" popover class="project-modal glas-modal">
+            <div class="modal-inhoud">
+                <button class="sluit-knop" popovertarget="modal-1" popovertargetaction="hide"
+                    aria-label="Sluit modal">&times;</button>
+                <div class="modal-badge">Project 01</div>
+                <h3>Sprint 0</h3>
+                <p>Bij de start van de minor ben ik gaan ontdekken wat voor soort developer ik wil zijn. Met mijn
+                    'Prikbord'-project heb ik geëxperimenteerd met verschillende interacties en heb ik voor het eerst
+                    data opgehaald via de FDND Directus API. Dit project hielp me om losser te worden in mijn proces:
+                    sneller dingen uitproberen en durven veranderen als een idee toch niet werkt.</p>
+                <a href="https://github.com/lynnb04/WDDSprint0" target="_blank" rel="noopener noreferrer"
+                    class="knop knop-secundair modal-knop">Bekijk op GitHub</a>
+            </div>
+        </div>
+        <div id="modal-2" popover class="project-modal glas-modal">
+            <div class="modal-inhoud">
+                <button class="sluit-knop" popovertarget="modal-2" popovertargetaction="hide">&times;</button>
+                <div class="modal-badge">Project 02</div>
+                <h3>Browser Technology (BT)</h3>
+                <p>Voor Browser Technology heb ik gekeken hoe je een website echt robuust maakt. Ik heb een
+                    belastingformulier gebouwd met Progressive Enhancement en Progressive
+                    Disclosure als basis. Hierdoor werkt het formulier altijd, ook als de browser oud is of
+                    het internet even traag.</p>
+                <p>Ik heb vooral geleerd hoe je met slimme CSS (zoals de <code>:has()</code> selector) een goede
+                    ervaring neerzet zonder dat je direct JavaScript nodig hebt voor de belangrijkste functies.</p>
+                <a href="https://github.com/lynnb04/Browser-Technology" target="_blank" rel="noopener noreferrer"
+                    class="knop knop-secundair modal-knop">Bekijk op GitHub</a>
+            </div>
+        </div>
+        <div id="modal-3" popover class="project-modal glas-modal">
+            <div class="modal-inhoud">
+                <button class="sluit-knop" popovertarget="modal-3" popovertargetaction="hide">&times;</button>
+                <div class="modal-badge">Project 03</div>
+                <h3>CSS to the Rescue</h3>
+                <p>Met 'CMD Artifaction' heb ik geprobeerd de grenzen van CSS op te zoeken. Ik heb een soort digitale
+                    kaleidoscoop gebouwd zonder ook maar één regel JavaScript te gebruiken. Ik heb technieken gebruikt
+                    zoals het Cicada Principle voor variatie in animaties en CSS
+                    Nesting om mijn code netjes te houden.</p>
+                <p>Het was een goede les in creatief denken binnen de beperkingen van de browser, waarbij ik heb geleerd
+                    hoe je complexe visuele effecten toch met CSS kunt maken.</p>
+                <a href="https://github.com/lynnb04/CSS-to-the-Rescue" target="_blank" rel="noopener noreferrer"
+                    class="knop knop-secundair modal-knop">Bekijk op GitHub</a>
+            </div>
+        </div>
+        <div id="modal-4" popover class="project-modal glas-modal">
+            <div class="modal-inhoud">
+                <button class="sluit-knop" popovertarget="modal-4" popovertargetaction="hide">&times;</button>
+                <div class="modal-badge">Project 04</div>
+                <h3>Hackathon</h3>
+                <p>Tijdens de hackathon heb ik met een team in korte tijd een prototype gebouwd voor een
+                    ruimtevaart-thema in opdracht van Nebula Xplorer. We moesten in een paar dagen tijd
+                    snel schakelen over de techniek en het ontwerp.</p>
+                <p>Mijn grootste bijdrage was het coderen van de header en zowel het ontwerp als de
+                    code voor de 'steps before launch' sectie. Daarnaast heb ik het ontwerp gemaakt
+                    voor de 'about' sectie (met de black hole spiral) en de footer, waarbij mijn teamgenoten de code
+                    voor die onderdelen hebben opgepakt. Het was een toffe les in hoe je design en code verdeelt binnen
+                    een team.</p>
+                <a href="https://github.com/DiegoR03/Hackton_2026_Team_2" target="_blank" rel="noopener noreferrer"
+                    class="knop knop-secundair modal-knop">Bekijk op GitHub</a>
+            </div>
+        </div>
+        <div id="modal-5" popover class="project-modal glas-modal">
+            <div class="modal-inhoud">
+                <button class="sluit-knop" popovertarget="modal-5" popovertargetaction="hide">&times;</button>
+                <div class="modal-badge">Project 05</div>
+                <h3>Human Centered Design (HCD)</h3>
+                <p>Bij HCD stond de gebruiker echt centraal. Ik heb nauw samengewerkt met Berend, die blind is, en dat
+                    heeft mijn blik op toegankelijkheid compleet veranderd. Ik heb de principes van Exclusive
+                    Design toegepast om een interface te maken die echt voor hem werkt.</p>
+                <p>De focus lag op auditieve feedback en een interface die geoptimaliseerd is voor extreme zoomniveaus.
+                    Het was een belangrijk project om te leren hoe je aannames loslaat en echt inclusief ontwerpt voor
+                    een specifieke gebruiker.</p>
+                <a href="https://github.com/lynnb04/Human-Centered-Design" target="_blank" rel="noopener noreferrer"
+                    class="knop knop-secundair modal-knop">Bekijk op GitHub</a>
+            </div>
+        </div>
+        <div id="modal-6" popover class="project-modal glas-modal">
+            <div class="modal-inhoud">
+                <button class="sluit-knop" popovertarget="modal-6" popovertargetaction="hide">&times;</button>
+                <div class="modal-badge">Project 06</div>
+                <h3>API</h3>
+                <p>Voor het vak API heb ik een Karaoke App gebouwd in Astro. Ik heb hiervoor data
+                    gecombineerd van verschillende bronnen (Deezer en Lyrics.ovh). Een grote uitdaging was het omzeilen
+                    van CORS-blokkades, wat ik heb opgelost met een API Proxy.</p>
+                <p>Ook heb ik API's gebruikt zoals View Transitions voor mooie overgangen
+                    tussen pagina's en de Picture-in-Picture API om de songteksten in een zwevend
+                    venster te tonen. Het belangrijkste inzicht van dit project was dat technische complexiteit (zoals
+                    CORS) je niet hoeft te stoppen als je bereid bent om onder de motorkap van het web te kijken en
+                    eigen oplossingen te bouwen.</p>
+                <a href="https://github.com/lynnb04/WDD-API" target="_blank" rel="noopener noreferrer"
+                    class="knop knop-secundair modal-knop">Bekijk op GitHub</a>
+            </div>
+        </div>
+        <div id="modal-7" popover class="project-modal glas-modal">
+            <div class="modal-inhoud">
+                <button class="sluit-knop" popovertarget="modal-7" popovertargetaction="hide">&times;</button>
+                <div class="modal-badge">Project 07</div>
+                <h3>Meesterproef</h3>
+                <p>To be continued...</p>
+            </div>
+        </div>
+
+        <!-- weekly nerd modals -->
+        <div id="wn-modal-1" popover class="project-modal glas-modal">
+            <div class="modal-inhoud">
+                <button class="sluit-knop" popovertarget="wn-modal-1" popovertargetaction="hide">&times;</button>
+                <div class="modal-badge">Weekly Nerd 01</div>
+                <h3>Kilian Valkhof</h3>
+                <p>Tijdens deze sessie vertelde Kilian Valkhof over moderne webstandaarden en "The Rule of Least Power".
+                    De kern van zijn betoog was om altijd de minst krachtige taal te kiezen die geschikt is voor een
+                    taak: HTML waar mogelijk, dan CSS, en pas als laatste JavaScript. Dit zorgt voor robuustere en beter
+                    toegankelijke websites. Een groot deel van de presentatie richtte zich op het vervangen van complexe
+                    JS-oplossingen door native CSS en HTML. We zagen hoe je met appearance: none en pseudo-elementen
+                    checkboxes volledig kunt stylen zonder een regel JS. Ook besprak hij de kracht van :focus-visible
+                    for betere toegankelijkheid en de native accordeon-functionaliteit met &lt;details&gt; en
+                    &lt;summary&gt;. Nieuwe toevoegingen zoals het name-attribuut op details-elementen (voor exclusieve
+                    accordeons) en de &lt;dialog&gt; API als vervanger voor confirm() laten zien hoe de browser steeds
+                    meer standaard UI-patronen overneemt. Tot slot wierp Kilian een blik op de toekomst met features uit
+                    de "Baseline", zoals field-sizing: content voor automatisch schaalbare tekstvakken en de nieuwe
+                    ::picker(select) mogelijkheden.</p>
+            </div>
+        </div>
+        <div id="wn-modal-2" popover class="project-modal glas-modal">
+            <div class="modal-inhoud">
+                <button class="sluit-knop" popovertarget="wn-modal-2" popovertargetaction="hide">&times;</button>
+                <div class="modal-badge">Weekly Nerd 02</div>
+                <h3>Peter-Paul Koch</h3>
+                <p>Peter-Paul Koch vertelde over browsers en support detection. Hij verduidelijkte dat een browser meer
+                    is dan alleen de interface die we zien; het is een samenstel van een rendering engine (zoals Blink
+                    of WebKit) en een JavaScript engine. Een cruciaal concept dat werd besproken was de constructie van
+                    de DOM (Document Object Model) en de minder bekende AOM (Accessibility Object Model), die essentieel
+                    is voor ondersteunende technologieën. Een groot deel van de presentatie ging over de geschiedenis,
+                    van Tim Berners-Lee's eerste WWW-browser in 1990 tot Chrome en de opkomst van nieuwe spelers zoals
+                    Ladybird. Koch legde uit hoe beslissingen uit het verleden de huidige stand van het web beïnvloeden
+                    (bijvoorbeeld de 'quirks mode' zonder doctype). Ook bespraken we technische aspecten zoals render
+                    blocking, waarbij het belang van defer en async voor JavaScript-bestanden werd benadrukt om de
+                    laadtijd van HTML en CSS niet te hinderen. De boodschap: om een goede developer te zijn, moet je
+                    begrijpen hoe verschillende engines interpretaties maken en hoe je de 'core' browsers (Chrome,
+                    Safari, Firefox) optimaal ondersteunt.</p>
+            </div>
+        </div>
+        <div id="wn-modal-3" popover class="project-modal glas-modal">
+            <div class="modal-inhoud">
+                <button class="sluit-knop" popovertarget="wn-modal-3" popovertargetaction="hide">&times;</button>
+                <div class="modal-badge">Weekly Nerd 03</div>
+                <h3>Nils Binder</h3>
+                <p>Nils Binder van 9elements deelde een aantal praktische tips voor het vertalen van design naar code.
+                    Hij liet zien hoe de drie afdelingen van hun bureau (communication design, product development en
+                    web development) samenwerken om hoogwaardige interfaces te creëren. Een groot deel van zijn
+                    presentatie was gewijd aan het slim gebruiken van CSS-technieken om ontwerpen tot leven te wekken.
+                    We leerden hoe Figma's 'auto layout' concepten direct vertalen naar CSS Flexbox (gap, padding,
+                    alignment) en hoe krachtig CSS Grid is voor complexe layouts, inclusief het gebruik van subgrid voor
+                    het uitlijnen van elementen over verschillende rijen heen. Een bijzonder interessant technisch
+                    detail was de steps() functie in CSS animaties, waarmee je een lange afbeelding kunt omzetten in een
+                    vloeiende stop-motion animatie door precies het juiste aantal stappen te definiëren. Ook kwamen de
+                    nieuwste mogelijkheden van de View Transitions API aan bod, bijvoorbeeld voor het naadloos wisselen
+                    van taal op een website of het 'morphen' van elementen tussen pagina's.</p>
+            </div>
+        </div>
+
+        <div id="wn-modal-4" popover class="project-modal glas-modal">
+            <div class="modal-inhoud">
+                <button class="sluit-knop" popovertarget="wn-modal-4" popovertargetaction="hide">&times;</button>
+                <div class="modal-badge">Weekly Nerd 04</div>
+                <h3>NL Design System</h3>
+                <p>Tijdens deze sessie namen Robbert Broersma en Yolijn van der Kolk ons mee in de wereld van het NL
+                    Design System. Dit is niet zomaar een bibliotheek met componenten, maar een grootschalig
+                    community-gedreven project met als doel de digitale dienstverlening van de overheid toegankelijker,
+                    consistenter en efficiënter te maken. Een van de belangrijkste punten was de versnippering binnen de
+                    overheid. Honderden gemeenten, provincies en uitvoeringsorganisaties bouwen vaak onafhankelijk van
+                    elkaar vergelijkbare digitale diensten. Dit leidt tot hoge kosten en een inconsistente
+                    gebruikerservaring. Het NL Design System lost dit op door een 'single source of truth' te bieden
+                    voor design en code, waarbij de focus ligt op samenwerking in plaats van het wiel steeds opnieuw
+                    uitvinden. Kernprincipes van het systeem: Toegankelijkheid (A11y) als standaard, Open Source &
+                    Community en Flexibiliteit via Design Tokens.</p>
+            </div>
+        </div>
+        <div id="wn-modal-5" popover class="project-modal glas-modal">
+            <div class="modal-inhoud">
+                <button class="sluit-knop" popovertarget="wn-modal-5" popovertargetaction="hide">&times;</button>
+                <div class="modal-badge">Weekly Nerd 05</div>
+                <h3>Rosa (Hackers everywhere)</h3>
+                <p>Rosa haar presentatie ging over "Hackers everywhere". Ze besprak het concept van "planned
+                    obsolescence": het bewust verslechteren van producten zodat consumenten gedwongen worden iets nieuws
+                    te kopen en hoe dit leidt tot een ongezonde afhankelijkheid van een paar grote techbedrijven. Het
+                    project "Rosa the travelling server" diende als een voorbeeld voor hoe we technologie weer in eigen
+                    hand kunnen nemen. Ik heb geleerd over Static Site Generators zoals 11ty, die websites sneller en
+                    duurzamer maken. Verder vertelde ze over het zelf hosten van je eigen diensten, van git-repositories
+                    en messaging-platforms tot je eigen radiostation. Met tools zoals YunoHost wordt deze vorm van
+                    digitale autonomie toegankelijker voor een breder publiek. Door zelf de controle over onze servers
+                    en tools te nemen, bouwen we aan een vrijer en veerkrachtiger internet.</p>
+            </div>
+        </div>
+        <div id="wn-modal-6" popover class="project-modal glas-modal">
+            <div class="modal-inhoud">
+                <button class="sluit-knop" popovertarget="wn-modal-6" popovertargetaction="hide">&times;</button>
+                <div class="modal-badge">Weekly Nerd 06</div>
+                <h3>Johann Huijkman</h3>
+                <p>Johann Huijkman heeft jarenlang gewerkt bij Q42 en gaf een verhelderende sessie over
+                    webtoegankelijkheid (A11y). Hij benadrukte dat toegankelijkheid vaak verkeerd wordt begrepen als
+                    iets dat alleen voor een kleine groep blinden is. In werkelijkheid omvatten de WCAG-basisprincipes
+                    (POUR: Perceivable, Operable, Understandable, Robust) een enorme diversiteit aan gebruikers,
+                    waaronder mensen met motorische beperkingen, lagetterden, en mensen met bijvoorbeeld autisme of
+                    ADHD. We leerden hoe specifieke ontwerpkeuzes verschillende groepen kunnen helpen of hinderen. Voor
+                    blinden zijn een heldere koppenstructuur en het vermijden van decoratieve alt-teksten cruciaal.
+                    Mensen met spierziektes of migraine hebben baat bij een rustige lay-out zonder felle kleurcontrasten
+                    of flitsende animaties. Voor gebruikers met neurodiverse eigenschappen zijn concrete instructies,
+                    voorspelbaarheid en het vermijden van overbodige prikkels (zoals advertenties of registratie-popups)
+                    essentieel. Johann's belangrijkste boodschap was dat we geen aannames moeten doen over waarom iemand
+                    een website bezoekt. Door inclusief te ontwerpen en te testen op extreme zoomniveaus (400-500%),
+                    creëren we een betere ervaring voor iedereen.</p>
+            </div>
+        </div>
+        <div id="wn-modal-7" popover class="project-modal glas-modal">
+            <div class="modal-inhoud">
+                <button class="sluit-knop" popovertarget="wn-modal-7" popovertargetaction="hide">&times;</button>
+                <div class="modal-badge">Weekly Nerd 07</div>
+                <h3>Sanne Peters</h3>
+                <p>Sanne Peters gaf een talk op de The Web You Want dag over de huidige staat en de toekomst van het
+                    web, getiteld "A kinder and gentler web". Haar boodschap was: het internet is tegenwoordig zo diep
+                    geworteld in onze samenleving dat het gebruik ervan vaak niet langer optioneel voelt, maar wordt
+                    opgedrongen. Volgens Peters zou het web een bewuste keuze moeten zijn en moet de ervaring voor de
+                    gebruiker altijd eenvoudig, veilig en aangenaam blijven. Een van de concrete oplossingen die zij
+                    aandroeg voor een kwalitatiever web was de "bad website reporter". Dit concept stelt gebruikers in
+                    staat om met één klik problematische websites te rapporteren aan een openbaar, doorzoekbaar
+                    register. Hiermee wordt feedback gedemocratiseerd en ontstaat er meer druk op beheerders om de
+                    gebruikerservaring te verbeteren. Daarnaast benadrukte Sanne dat goede ontwerpers een breed
+                    wereldbeeld moeten hebben. Ze spoorde ons aan om uit onze eigen bubbel te treden door in gesprek te
+                    gaan met anderen en ons te verdiepen in verhalen die ver afstaan van onze eigen belevingswereld. Met
+                    verwijzingen naar werken zoals "Het zotte geweld" van Joris Vermassen en "The Disordered Cosmos" van
+                    Chanda Prescod-Weinstein, onderstreepte ze dat techniek niet losgezien kan worden van menselijkheid
+                    en sociale verantwoordelijkheid. Vind een maatschappelijk probleem waar je gepassioneerd over bent,
+                    en realiseer je dat je alleen door collectieve inspanning echt impact kunt maken.</p>
+            </div>
+        </div>
+
+        <footer class="glas">
+            <div class="footer-inhoud container">
+                <p><span>Lynn Bolderman</span><span>&bull;</span><a href="https://github.com/lynnb04" target="_blank"
+                        rel="noopener noreferrer" class="footer-link">GitHub</a></p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
