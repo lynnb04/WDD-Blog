@@ -241,6 +241,43 @@ body {
     margin-top: 2.5rem;
 }
 
+.reflectie-sectie ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: grid;
+    gap: 1.2rem;
+}
+
+.reflectie-sectie li {
+    position: relative;
+    padding: 1.2rem 1.5rem 1.2rem 3.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px var(--glass-shadow);
+}
+
+.reflectie-sectie li::before {
+    content: '';
+    position: absolute;
+    left: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: var(--brand-pink);
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(214, 140, 147, 0.4);
+}
+
+#thema-checkbox:checked~.pagina-wrapper .reflectie-sectie li {
+    background: rgba(255, 255, 255, 0.03);
+}
+
 /* header */
 .hoofd-header {
     position: sticky;
