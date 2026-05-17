@@ -587,9 +587,36 @@ body {
 
 .modal-inhoud h3 {
     font-size: 2.2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
     line-height: 1.2;
     font-weight: 700;
+}
+
+/* Grade badge inside modals */
+.modal-grade {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.modal-grade span {
+    background: rgba(214, 140, 147, 0.15);
+    border: 1px solid rgba(214, 140, 147, 0.3);
+    color: var(--brand-red);
+    padding: 0.2rem 0.85rem;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+#thema-checkbox:checked~.pagina-wrapper .modal-grade span {
+    background: rgba(224, 163, 169, 0.15);
+    border-color: rgba(224, 163, 169, 0.3);
+    color: var(--brand-pink);
 }
 
 .sluit-knop {
